@@ -1,3 +1,7 @@
+
+import string
+
+
 class Pair:
     def __init__(self):
         self.first = None
@@ -23,5 +27,12 @@ class Interval:
         if self.is_empty() or other.is_empty():
             return False
         return self.contains(other.lower) or self.contains(other.upper) or other.contains(self.lower)
+
+class Password:
+    def __init__(self, password):
+        self.__password = password
+
+    def verify(self,string):
+        return self.__password == string
 
 
